@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>&nbsp;&nbsp;&nbsp;A P S&nbsp;&nbsp;&nbsp;Advanced Planning &amp; Scheduling System</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+</head>
+<body>
+    <input type="hidden" name="TryCnt"    value="0"/>
+    <input type="hidden" name="OldPasswd" value=""/>
+    <input type="hidden" name="ChgFlag"   value=""/>
+    <input type="hidden" name="signon"    value="SIGNON"/>
+    <div class="login_wrap">
+        <h1><img src="/apsII/images/login/logo.png" alt="logo"></h1>
+        <div class="inner">
+            <div class="input_wrap">
+                <div class="box">
+                    <span class="ico1"></span>
+                    <p>
+                        <select id="CorpCd" name="CorpCd" title="Choose your corporation.">
+                            <% for(int i=0; i<1; i++) { // for(int i=0; i<corpList.length; i++) { %>
+                            <!-- <option value="<%=corpList[i] %>"<%=curCorp.equals(corpList[i]) ? " selected" : ""%>><%=corpList[i]%></option> -->
+                            <!-- <option value="<%=corpList[i] %>"<%="KMI".equals(corpList[i]) ? " selected" : ""%>><%=corpList[i]%></option> -->
+                            <option value="KMI">KMI</option>
+                            <% } %>
+                        </select>
+                    </p>
+                </div>
+                <div class="box">
+                    <span class="ico2"></span>
+                    <p>
+                        <input type="text" id="Userid" name="Userid" maxlength="20" value="" title="User ID" onKeyPress="if((window.event.keyCode)==13) Submit_Check()" onKeyUp="if(this.value.length==20) document.frmLogin.Passwd.focus();" placeholder="User ID Input" autofocus/>
+                    </p>
+                </div>
+                <div class="box">
+                    <span class="ico3"></span>
+                    <p>
+                        <input type="password" id="Passwd" name="Passwd" maxlength="20" value="" onKeyPress="if((window.event.keyCode)==13) Submit_Check()" placeholder="Password Input" autocomplete="off"/>
+                    </p>
+                </div>
+                <div class="box">
+                    <span class="ico4"></span>
+                    <p>
+                        <input type="password" id="Passwd_change" name="Passwd_change" maxlength="20" value="" onKeyPress="if((window.event.keyCode)==13) Submit_Check()" placeholder="New Password Input" autocomplete="off"/>
+                    </p>
+                </div>
+                <span class="btn_login" onClick="Javascript:Submit_Check();"><span>LOGIN</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="login_footer">
+        <p>COPYRIGHT (C)2017 <span>HYUNDAI.KIA MOTOR</span> COMPANY. ALL RIGHTS RESERVED.</p>
+        <p>Security contact : geneseos82@hyundai-autoever.com</p>
+    </div>
+</body>
+</html>
